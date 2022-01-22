@@ -3,16 +3,16 @@
 {% block title %}Головна{% endblock %}
 
 {% block content %}
-	<form action="{% url 'greeting' %}" method="POST">
-		{% for msg in messages %}
-			<div class="alert alert-primary alert-dismissible fade show" role="alert">
-				<strong>{{ msg }}</strong>
-				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-			</div>
-		{% endfor %}
+	{% for msg in messages %}
+		<div class="alert alert-primary alert-dismissible fade show" role="alert">
+			<strong>{{ msg }}</strong>
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		</div>
+	{% endfor %}
 
-		<div class="card border-primary" style="margin: 25px auto; max-width: 45rem;">
-			<div class="card-header">
+	<div class="card border-primary" style="margin: 25px auto; max-width: 45rem;">
+		<div class="card-header">
+			<form action="{% url 'greeting' %}" method="POST">
 				<div style="margin: 5px 0; text-align: center;">
 					<input type="text" required class="form-control" placeholder="Ім'я" name="name">
 				</div>
@@ -24,7 +24,7 @@
 				<div style="margin: 5px 0; text-align: center;">
 					<button type="submit" class="btn btn-primary">Привiтатись</button>
 				</div>
-			</div>
+			</form>
 		</div>
-	</form>
+	</div>
 {% endblock %}
