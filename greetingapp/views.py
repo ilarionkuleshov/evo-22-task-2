@@ -19,3 +19,7 @@ def greeting(request):
 			messages.success(request, f"Привiт, {name} {surname}!")
 
 	return render(request, 'greetingapp/greeting.html')
+
+
+def visitors_list(request):
+	return render(request, 'greetingapp/visitors.html', {'visitors': Visitor.objects.all()})
