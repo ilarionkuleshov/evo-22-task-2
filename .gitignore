@@ -1,3 +1,5 @@
 venv/
 db.sqlite3
 greetingproject/__pycache__/
+greetingapp/__pycache__/
+greetingapp/migrations/__pycache__/
