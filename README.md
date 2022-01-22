@@ -8,6 +8,8 @@
 	<img src="./screenshot.png" height="500px"/>
 </p>
 
+Проект написаний на Python та Django.
+
 ## Обгортка в Docker i розгортка на Heroku
 
 Створення додатку в Heroku CLI:
